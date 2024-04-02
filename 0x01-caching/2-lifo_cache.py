@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """
-    a module that implements the solution for task 2
+    a module that implements the solution for task 3
 """
 
 BaseCaching = __import__('base_caching').BaseCaching
 
 
-class FIFOCache(BaseCaching):
+class LIFOCache(BaseCaching):
     """
         This class inherits from a base class (BaseCaching)
     """
@@ -27,9 +27,9 @@ class FIFOCache(BaseCaching):
         self.cache_data[key] = item
 
         if len(self.cache_data) > BaseCaching.MAX_ITEMS:
-            first_key = list(self.cache_data.keys())[0]
-            del self.cache_data[first_key]
-            print("DISCARD: {}".format(first_key))
+            last_key = list(self.cache_data.keys())[-2]
+            del self.cache_data[last_key]
+            print("DISCARD: {}".format(last_key))
 
     def get(self, key):
         """

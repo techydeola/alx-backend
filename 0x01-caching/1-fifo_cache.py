@@ -19,7 +19,7 @@ class FIFOCache(BaseCaching):
     def put(self, key, item):
         """
             assign to the dictionary self.cache_data the item value
-            for the key. deletes the last item in the dictionary if
+            for the key. deletes the first item in the dictionary if
             it is greater than MAX_ITEMS
         """
         if key is None or item is None:
