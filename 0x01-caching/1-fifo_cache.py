@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    a module that implements the solution for task 2
+    a module that implements the solution for task 1
 """
 
 BaseCaching = __import__('base_caching').BaseCaching
